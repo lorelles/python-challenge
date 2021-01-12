@@ -25,22 +25,24 @@ with open(financial_csv, newline='') as csv_file:
         ##profit_losses = int(financial_csv[1])
 
         # Assign values to variables with descriptive data
+        # Add months
         total_months.append(row[0])    
-
+        # Add amount
         net_amount.append(int(row[1]))
-
-        #total_change.append(row)
-
+        # Add change in profit/loss
+        ##total_change.append(row)
+        # Add greatest increase change
         #max_change.append(int(row[1]))
-
+        # Add greatest decrease in change
         #max_decrease.append(int(row[1]
 
         # Define function to return number of months included in dataset
-        mons = len(total_months)
+        total_mons = len(total_months)
+        print(total_mons)
 
         # Define function to calculate net total amount of "Profit/Losses" over entire period
-        total_amount = sum(net_amount)
-        print(total_amount)
+        ##total_amount = sum(net_amount)
+        ##print("The total amount of Profit/Loss is" + total_amount)
 
         # Define function to calculate changes in "Profit/Losses" over entie period
         #total_change = sum(total_change)
@@ -55,4 +57,12 @@ with open(financial_csv, newline='') as csv_file:
         #max_decrease =
 
 ## Script shoud print analysis to the terminal and export text file with results
-#output_file = os.path.join("PyBank.txt")
+print("Financial Analysis")
+print("-------------------")
+#print(f"Total Months: {}")
+#print(f"Total: #{}")
+#print(f"Average Change:  #{}")
+#print(f"Greatest Increase in Profits: ${}")
+#print(f"Greatest Decrease in Profits: ${}")
+
+output_file = os.path.join("PyBank.txt")
