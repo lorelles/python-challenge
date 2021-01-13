@@ -2,11 +2,11 @@ import os
 import csv
 
 # Path to collect data from resources folder
-election_csv = os.path.join("PyPoll/resources", "election_data.csv")
+election_csv = os.path.join("resources", "election_data.csv")
 
 # Lists to store data
 votes = []
-#candidates = []
+candidates = []
 #percent_won = []
 #total_won = []
 #winner = []
@@ -27,8 +27,9 @@ with open(election_csv, newline='') as csv_file:
         #print(total_votes)
 
         # Define function to create list of candidates who received votes
-        #candidates.append(row[3])
-        ##candidates = 
+        #if CurrentName != candidates:
+            candidates.append(row[3])
+        
 
         # Define function to calculate percentage of votes each candidate won
         #percent_won.append(row[3])
@@ -41,6 +42,12 @@ with open(election_csv, newline='') as csv_file:
         # Define function to calculate winner of election based on popular vote
         #winner.append(row[3])
         ##winner = 
+        ###Append Dict for values 
+
+# Define function to calculate total number of votes cast
+votes.append(row[0])
+total_votes = len(votes)
+print(total_votes)
 
 # Final script should both print the analysis to the terminal and export a text file with the results
 ##print("Election Results")
