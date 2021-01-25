@@ -8,7 +8,7 @@ financial_csv = os.path.join("resources", "budget_data.csv")
 # Assign lists to store data
 total_months = []
 net_amount = []
-#total_change = []
+total_change = []
 #mean_change = []
 #max_increase = []
 #max_decrease = []
@@ -31,7 +31,7 @@ with open(financial_csv, newline='') as csv_file:
         net_amount.append(int(row[1]))
         ###net_amount.append(int(row[1]-row[0]))
         # Add change in profit/loss
-        ##total_change.append(row)
+        total_change.append(int(row[1]-row[0])
         # Add greatest increase change
         #max_change.append(int(row[1]))
         # Add greatest decrease in change
@@ -68,7 +68,7 @@ total_amount = sum(net_amount)
 print("Financial Analysis")
 print("-------------------")
 print(f"Total Months: {total_mons}")
-print(f"Total Profit/Losses : ${total_amount}")
+print(f"Total: ${total_amount}")
 #print(f"Average Change:  #{}")
 #print(f"Greatest Increase in Profits: ${}")
 #print(f"Greatest Decrease in Profits: ${}")
