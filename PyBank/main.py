@@ -55,7 +55,7 @@ with open(financial_csv, newline='') as csv_file:
 
 # Find total number of months in data set
 total_mons = len(total_months)
-#print(total_mons)
+print(total_mons)
 
  # Calculate net total amount of "Profit/Losses" over entire period
 total_amount = sum(net_amount)
