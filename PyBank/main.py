@@ -19,19 +19,27 @@ with open(financial_csv, newline='') as csv_file:
     csv_header = next(csv_file)    
     #print(f"Header: {csv_header}")    
     
+    #count = 0
+
     # Loop through data
     for row in csv_reader:
         ##date = string(financial_data[0])
         ##profit_losses = int(financial_csv[1])
 
-        # Assign values to variables with descriptive data
+        ## Assign values to variables with descriptive data
+        
         # Add months
-        total_months.append(row[0])    
+        total_months.append(row[0])   
+        
         # Add amount
         net_amount.append(int(row[1]))
-        ###net_amount.append(int(row[1]-row[0]))
-        # Add change in profit/loss
-        total_change.append(int(row[1]-row[0])
+        
+        # Calculate change in profit/loss
+        total_change.append(int(row[1]))
+
+
+
+    
         # Add greatest increase change
         #max_change.append(int(row[1]))
         # Add greatest decrease in change
@@ -46,7 +54,13 @@ with open(financial_csv, newline='') as csv_file:
         # Define function to calculate greatest increase in profits (Date and amount) over entire period
         ##max_increase = net_amount.max
 
+#Determine total amount of months listed in data
+total_mons = len(total_months) 
 
+# Calculate net total amount of "Profit/Losses" over entire period
+total_amount = sum(net_amount)
+
+#print(total_change)
 # Define function to calculate greatest decrease in losses (Date and amount) over entire period
 # #max_decrease = net_amount.min
 
@@ -54,13 +68,8 @@ with open(financial_csv, newline='') as csv_file:
 ##max_increase = net_amount.max
 
 # Find total number of months in data set
-total_mons = len(total_months)
-print(total_mons)
-
- # Calculate net total amount of "Profit/Losses" over entire period
-total_amount = sum(net_amount)
-#print(f"The total amount of Profit/Loss is:")
-#print(total_amount)
+#total_mons = len(total_months)
+#print(total_mons)
 
 
 

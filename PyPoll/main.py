@@ -28,7 +28,7 @@ with open(election_csv, newline='') as csv_file:
 
         # Define function to create list of candidates who received votes
         #if CurrentName != candidates:
-            candidates.append(row[3])
+            #candidates.append(row[3])
         
 
         # Define function to calculate percentage of votes each candidate won
@@ -45,8 +45,8 @@ with open(election_csv, newline='') as csv_file:
         ###Append Dict for values 
 
 # Define function to calculate total number of votes cast
-votes.append(row[0])
-total_votes = len(votes)
+#votes.append(row[0])
+#total_votes = len(votes)
 print(total_votes)
 
 # Final script should both print the analysis to the terminal and export a text file with the results
