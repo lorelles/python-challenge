@@ -6,7 +6,9 @@ election_csv = os.path.join("resources", "election_data.csv")
 
 # Lists to store data
 votes = []
+name = []
 candidates = []
+all_candidates = []
 #percent_won = []
 #total_won = []
 #winner = []
@@ -24,11 +26,16 @@ with open(election_csv, newline='') as csv_file:
         # Define function to calculate total number of votes cast
         votes.append(row[0])
         total_votes = len(votes)
-        #print(total_votes)
 
         # Define function to create list of candidates who received votes
-        #if CurrentName != candidates:
-            #candidates.append(row[3])
+        name.append(row[2])
+        #if name != candidates:
+            candidates.append(row[2])
+            #break
+        #else:
+            #all_candidates.append(row[2])
+            break
+
         
 
         # Define function to calculate percentage of votes each candidate won
@@ -47,13 +54,15 @@ with open(election_csv, newline='') as csv_file:
 # Define function to calculate total number of votes cast
 #votes.append(row[0])
 #total_votes = len(votes)
-print(total_votes)
+#print(total_votes)
+
+#print(candidates)
 
 # Final script should both print the analysis to the terminal and export a text file with the results
-##print("Election Results")
-##print("---------------------")
-##print(f"Total Votes: {}")
-##print("---------------------")
+print("Election Results")
+print("---------------------")
+print(f"Total Votes: {total_votes}")
+print("---------------------")
 ##print("")
 ##print("")
 ##print("")

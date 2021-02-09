@@ -10,21 +10,16 @@ total_months = []
 net_amount = []
 total_change = []
 change_list = []
-#max_increase = []
-#max_decrease = []
+max_increase = []
+max_decrease = []
 
 # Read in CSV file
 with open(financial_csv, newline='') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
     csv_header = next(csv_file)    
-    #print(f"Header: {csv_header}")    
-    
-    #count = 0
     
     # Loop through data
     for row in csv_reader:
-        ##date = string(financial_data[0])
-        ##profit_losses = int(financial_csv[1])
 
         ## Assign values to variables with descriptive data
         
@@ -54,18 +49,15 @@ total_amount = sum(net_amount)
 #Calculate average change in profit/losses over entire period
 average_change = round(mean(change_list),2)
 
-# Define function to calculate greatest increase in profits (Date and amount) over entire period
+# Calculate greatest increase in profits (Date and amount) over entire period
 max_increase = round(max(change_list),2)
 
-#print(total_change)
-# Define function to calculate greatest decrease in losses (Date and amount) over entire period
+#Calculate greatest decrease in losses (Date and amount) over entire period
 max_decrease = round(min(change_list),2)
 
-# Find total number of months in data set
-#total_mons = len(total_months)
-#print(total_mons)
-
-
+#Find months for max increase/decrease
+#max_row = 
+#print(max_row)
 
 ## Script shoud print analysis to the terminal and export text file with results
 print("Financial Analysis")
