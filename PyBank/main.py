@@ -40,6 +40,8 @@ with open(financial_csv, newline='') as csv_file:
         change= int(total_change[idx+1][1])-int(total_change[idx][1])
         change_list.append(change)
 
+    
+
 #Determine total amount of months listed in data
 total_mons = len(total_months) 
 
@@ -56,7 +58,14 @@ max_increase = round(max(change_list),2)
 max_decrease = round(min(change_list),2)
 
 #Find months for max increase/decrease
-#max_row = 
+with open(financial_csv, newline='') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=",")
+    csv_header = next(csv_file)    
+    
+    # Loop through data
+    for row in csv_reader:
+        if number == max_increase
+        print(row)
 #print(max_row)
 
 ## Script shoud print analysis to the terminal and export text file with results

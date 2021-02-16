@@ -30,7 +30,7 @@ with open(election_csv, newline='') as csv_file:
         # Define function to create list of candidates who received votes
         name.append(row[2])
         #if name != candidates:
-            candidates.append(row[2])
+            #candidates.append(row[2])
             #break
         #else:
             #all_candidates.append(row[2])
