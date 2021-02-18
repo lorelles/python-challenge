@@ -34,7 +34,7 @@ with open(election_csv, newline='') as csv_file:
             #break
         #else:
             #all_candidates.append(row[2])
-            break
+            #break
 
         
 
