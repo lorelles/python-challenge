@@ -22,7 +22,7 @@ with open(financial_csv, newline='') as csv_file:
     for row in csv_reader:
 
         ## Assign values to variables with descriptive data
-        
+      
         # Add months
         total_months.append(row[0])   
         
@@ -31,6 +31,7 @@ with open(financial_csv, newline='') as csv_file:
         
         # Calculate change in profit/loss
         total_change.append(row)
+        
         
     #Calculate the monthly change in profit/loss
     ##Formula to calculate this value was obtained from Charlie Loveall who received the formula from his tutor.
