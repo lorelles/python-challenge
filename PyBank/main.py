@@ -80,7 +80,7 @@ max_decrease = round(min(change_list),2)
 ## Script shoud print analysis to the terminal and export text file with results
 print("Financial Analysis")
 print("-------------------")
-print(f"Total Months: {total_mons}")
+#print(f"Total Months: {total_mons}")
 print(f"Total: ${total_amount}")
 print(f"Average Change:  ${average_change}")
 print(f"Greatest Increase in Profits: ${max_increase}")
