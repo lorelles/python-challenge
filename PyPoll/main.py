@@ -12,7 +12,7 @@ all_candidates = []
 #percent_won = []
 #total_won = []
 #winner = []
-
+i = 0
 
 # Read in the CSV file
 with open(election_csv, newline='') as csv_file:
@@ -28,14 +28,11 @@ with open(election_csv, newline='') as csv_file:
         total_votes = len(votes)
 
         # Define function to create list of candidates who received votes
+        name.append("first_name")
+        if name[i] != row[2]:      
+            candidates.append(row[2])
+        i = i + 1
         name.append(row[2])
-        #if name != candidates:
-            #candidates.append(row[2])
-            #break
-        #else:
-            #all_candidates.append(row[2])
-            #break
-
         
 
         # Define function to calculate percentage of votes each candidate won
@@ -51,10 +48,12 @@ with open(election_csv, newline='') as csv_file:
         ##winner = 
         ###Append Dict for values 
 
+
 # Define function to calculate total number of votes cast
 #votes.append(row[0])
 #total_votes = len(votes)
 #print(total_votes)
+
 
 #print(candidates)
 

@@ -12,6 +12,8 @@ total_change = []
 change_list = []
 max_increase = []
 max_decrease = []
+mo_inc = []
+mo_dec = []
 
 # Read in CSV file
 with open(financial_csv, newline='') as csv_file:
@@ -31,19 +33,37 @@ with open(financial_csv, newline='') as csv_file:
         
         # Calculate change in profit/loss
         total_change.append(row)
-        
-        
+
+        #Find months for max increase/decrease
+        #if max_increase == 1926159
+            
+
     #Calculate the monthly change in profit/loss
     ##Formula to calculate this value was obtained from Charlie Loveall who received the formula from his tutor.
     for idx, value in enumerate(total_change):
         if idx == 85:
             break
         change= int(total_change[idx+1][1])-int(total_change[idx][1])
+        
         change_list.append(change)
+
+    for i in change_list:
+        if i == 1926159:
+            mo_inc.append(row[0])
+        #else:
+            #break
+        
+        elif i == -2196167:
+            mo_dec.append(row[0])
+            break
 
     #Find months for max increase/decrease   
     #if row == 1926159
         #print(row)
+
+
+print(mo_inc)
+print(mo_dec)
 
 #Determine total amount of months listed in data
 total_mons = len(total_months) 
@@ -58,9 +78,10 @@ average_change = round(mean(change_list),2)
 max_increase = round(max(change_list),2)
 #print(max_increase)
 
+
 #Find months for max increase/decrease
 #if max_increase == 1926159
-    #print(row)
+    ##increse_mo 
 #print(csv_reader.index(max_increase))
 
 #Calculate greatest decrease in losses (Date and amount) over entire period
