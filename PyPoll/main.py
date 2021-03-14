@@ -6,19 +6,22 @@ election_csv = os.path.join("resources", "election_data.csv")
 
 # Lists to store data
 votes = []
-name = []
-candidates = []
-all_candidates = []
+#name = []
+#candidates = []
+#all_candidates = []
 #percent_won = []
 #total_won = []
 #winner = []
-i = 0
+#i = 0
 
 # Read in the CSV file
 with open(election_csv, newline='') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
     csv_header = next(csv_file)
     #print(f"Header: {csv_header}")
+
+candidates = {}
+candidates = dict()
 
     # Loop through the data
     for row in csv_reader:
@@ -28,11 +31,19 @@ with open(election_csv, newline='') as csv_file:
         total_votes = len(votes)
 
         # Define function to create list of candidates who received votes
-        name.append("first_name")
-        if name[i] != row[2]:      
-            candidates.append(row[2])
-        i = i + 1
-        name.append(row[2])
+
+        ### FROM TERRA:
+        # Use dictionary-add each candidate and vote count, if already exists acces candidate key, add vote count
+        if name == row[2]:
+            candidates.append()
+        else:
+            break
+        print(candidates)
+        #name.append("first_name")
+        #if name[i] != row[2]:      
+            #candidates.append(row[2])
+        #i = i + 1
+        #name.append(row[2])
         
 
         # Define function to calculate percentage of votes each candidate won

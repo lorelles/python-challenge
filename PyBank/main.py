@@ -12,8 +12,8 @@ total_change = []
 change_list = []
 max_increase = []
 max_decrease = []
-mo_inc = []
-mo_dec = []
+#mo_inc = []
+#mo_dec = []
 
 # Read in CSV file
 with open(financial_csv, newline='') as csv_file:
@@ -47,23 +47,55 @@ with open(financial_csv, newline='') as csv_file:
         
         change_list.append(change)
 
-    for i in change_list:
-        if i == 1926159:
-            mo_inc.append(row[0])
+    #for row in total_months:
+        #if index == 24:
+            #print(row)
+
+    #for i in range(len(total_months)):
+        #if list[i] == 24
+            #return True
+        #return False
+        #print(i)
+
+    #for row in total_months:
+        #if row == -2196167:
+            #print(row)
+            #break
+
+    #for row in total_months:
+        #if row == 24:
+            #mo_inc.append()
         #else:
             #break
-        
-        elif i == -2196167:
-            mo_dec.append(row[0])
-            break
+            
+        #elif i == -2196167:
+            #mo_dec.append(row[0])
+            #break
 
     #Find months for max increase/decrease   
     #if row == 1926159
         #print(row)
 
+#Find the index of max/min then locate month with the index(account for header):
 
-print(mo_inc)
-print(mo_dec)
+inc_index = change_list.index(1926159)
+print(inc_index)
+dec_index = change_list.index(-2196167)
+print(dec_index)
+
+mo_inc = total_months[24+1]
+mo_dec = total_months[43+1]
+
+#for idx, value in enumerate(total_months):
+    #if idx ==24:
+        #break
+    #print(row)
+
+
+#print(change_list)
+#print(total_months)
+#print(mo_inc)
+#print(mo_dec)
 
 #Determine total amount of months listed in data
 total_mons = len(total_months) 
@@ -104,7 +136,7 @@ print("-------------------")
 #print(f"Total Months: {total_mons}")
 print(f"Total: ${total_amount}")
 print(f"Average Change:  ${average_change}")
-print(f"Greatest Increase in Profits: ${max_increase}")
-print(f"Greatest Decrease in Profits: ${max_decrease}")
+print(f"Greatest Increase in Profits: {mo_inc} $({max_increase})")
+print(f"Greatest Decrease in Profits: {mo_dec} $({max_decrease})")
 
 output_file = os.path.join("PyBank.txt")
