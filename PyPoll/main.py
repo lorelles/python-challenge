@@ -29,17 +29,21 @@ with open(election_csv, newline='') as csv_file:
         names.append(str(row[2]))
 
         # Use dictionary-add each candidate and vote count, if already exists acces candidate key, add vote count
-        candidates = {}
+#candidates = {}
         i = 0
-        for name in names:
-            if name[i] == name:
-                candidates[name] += 1
-            else:
-                candidates[name] = 1
-                break
+        candidates = []
+#for name in names:
+        if names not in candidates:     
+            candidates.append(names)
+    #else:
+        #candidates[name] = 1
+        
+        #break
+    #i = i + 1
+        #for key,value in dict:
 
-#print(candidates)
-
+print(candidates)
+print(len(names))
 #for name in names:
     #if name[i] == name:
         #candidates["name"] += 1
