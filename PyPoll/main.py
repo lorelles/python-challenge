@@ -7,8 +7,6 @@ election_csv = os.path.join("resources", "election_data.csv")
 # Lists to store data
 votes = []
 names = []
-#candidates = []
-#all_candidates = []
 #percent_won = []
 #total_won = []
 #winner = []
@@ -29,27 +27,14 @@ with open(election_csv, newline='') as csv_file:
         names.append(str(row[2]))
 
         # Use dictionary-add each candidate and vote count, if already exists acces candidate key, add vote count
-#candidates = {}
+        candidates = {}
         i = 0
-        candidates = []
-#for name in names:
-        if names not in candidates:     
-            candidates.append(names)
-    #else:
-        #candidates[name] = 1
-        
-        #break
-    #i = i + 1
-        #for key,value in dict:
-
-print(candidates)
-print(len(names))
-#for name in names:
-    #if name[i] == name:
-        #candidates["name"] += 1
-    #else:
-        #candidates["name"] = 1
-                #break
+        for name in names:
+            if name[i] == name:
+                candidates[name] += 1
+            else:
+                candidates[name] = 1
+                break
                 
         # Define function to calculate percentage of votes each candidate won
         #percent_won.append(row[3])
